@@ -1,0 +1,45 @@
+{
+  "exercises": [
+    {
+      "type": "programming", "id": 5101, "title": "H03 Sorting Station",
+      "maxPoints": 10.0, "bonusPoints": 0.0, "difficulty": "MEDIUM",
+      "releaseDate": "2026-10-20T10:00:00Z", "startDate": "2026-10-20T10:00:00Z",
+      "dueDate": "2026-10-27T21:59:00Z", "assessmentDueDate": "2026-10-30T21:59:00Z",
+      "mode": "INDIVIDUAL", "teamMode": false, "includedInOverallScore": "INCLUDED_COMPLETELY",
+      "categories": ["{\"category\":\"Homework\",\"color\":\"#3e8acc\"}", "plain-category"],
+      "studentParticipations": [
+        {"id": 8001, "type": "student", "initializationState": "INITIALIZED", "testRun": false},
+        {"id": 8002, "type": "student", "initializationState": "INITIALIZED", "testRun": true}
+      ]
+    },
+    {
+      "type": "quiz", "id": 5102, "title": "Tutorial Group", "maxPoints": 1.0,
+      "releaseDate": "2026-10-18T20:00:00Z", "dueDate": "2026-10-30T12:00:00Z", "quizEnded": true,
+      "includedInOverallScore": "NOT_INCLUDED",
+      "studentParticipations": [{"id": 8003, "type": "student", "testRun": false}]
+    },
+    {
+      "type": "text", "id": 5103, "title": "Bonus Essay", "maxPoints": 5.0,
+      "releaseDate": "2026-11-02T08:00:00Z", "dueDate": "2026-11-09T21:59:00Z",
+      "includedInOverallScore": "INCLUDED_AS_BONUS"
+    },
+    {
+      "type": "programming", "id": 5104, "title": "H02 Loops", "maxPoints": 8.0,
+      "releaseDate": "2026-10-13T10:00:00Z", "dueDate": "2026-10-20T21:59:00Z",
+      "includedInOverallScore": "INCLUDED_COMPLETELY",
+      "studentParticipations": [{"id": 8004, "type": "student", "testRun": false}]
+    },
+    {
+      "type": "programming", "id": 5105, "title": "Practice: Warm-up", "maxPoints": 0.0,
+      "releaseDate": "2026-10-14T10:00:00Z", "includedInOverallScore": "NOT_INCLUDED"
+    },
+    {"type": "programming", "id": "not-an-int", "title": "Broken entry"}
+  ],
+  "participationResults": [
+    {"score": 60.0, "rated": true, "participationId": 8001},
+    {"score": 80.0, "rated": true, "participationId": 8001},
+    {"score": 100.0, "rated": false, "participationId": 8002},
+    {"score": 0.0, "rated": false, "participationId": 8003}
+  ],
+  "totalScores": {"maxPoints": 18.0, "reachablePoints": 18.0}
+}

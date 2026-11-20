@@ -1,0 +1,14 @@
+[
+  {"id": 8002, "content": "**Imaginary notice**\nMeet on Monday.", "title": "Room change",
+   "creationDate": "2026-11-08T09:00:00Z", "updatedDate": "2026-11-08T09:10:00Z",
+   "author": {"name": "Synthetic Instructor", "login": "private-login", "email": "private@example.invalid"},
+   "authorRole": "INSTRUCTOR", "displayPriority": "PINNED", "resolved": true,
+   "conversation": {"id": 301, "type": "channel"},
+   "answers": [
+     {"id": 9002, "content": "Confirmed.", "creationDate": "2026-11-08T10:00:00Z",
+      "resolvesPost": true, "authorRole": "TUTOR"},
+     {"id": 9001, "content": "Which room?", "creationDate": "2026-11-08T09:30:00Z"}
+   ]},
+  {"id": 8001, "content": "Earlier news\n[Sheet 1.pdf](/api/core/files/courses/901/conversations/301/2026-11-07T10-00-00-000_Sheet_1.pdf)\n![Room map.png](/api/core/files/courses/901/conversations/301/2026-11-07T10-00-01-000_Room_map.png)\n[again](/api/core/files/courses/901/conversations/301/2026-11-07T10-00-00-000_Sheet_1.pdf)\n[other course](/api/core/files/courses/902/conversations/1/x.pdf)\n[outside](https://example.invalid/x.pdf)", "creationDate": "2026-11-07T10:00:00Z",
+   "conversation": {"id": 301, "type": "channel"}, "hasForwardedMessages": true}
+]

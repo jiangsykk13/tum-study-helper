@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "date": "2026-10-22",
+  "generated_at": "2026-10-21T21:02:00+02:00",
+  "tasks": [
+    {"id": "iti-l02", "section": "course", "course": "Pretend Informatics", "course_key": "INHN0001",
+     "kind": "lecture", "required": true, "origin": "new", "minutes": 60, "title": "读 L02 第 1–24 页"},
+    {"id": "ca-lec02", "section": "course", "course": "Pretend Architecture", "course_key": "INHN0003",
+     "kind": "lecture", "required": true, "origin": "new", "minutes": 45, "title": "lec02 数制转换"},
+    {"id": "en-read", "section": "course", "course": "Pretend Entrepreneurship", "course_key": "MGTHN0133",
+     "kind": "extension", "required": false, "origin": "new", "minutes": 30, "title": "读 Sarasvathy (2001)"}
+  ]
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "id": 5002, "title": "Lecture 2: Sorting", "description": "Synthetic description.",
+    "startDate": "2026-10-21T10:00:00+02:00", "endDate": "2026-10-21T12:00:00+02:00", "isTutorialLecture": false,
+    "lectureUnits": [
+      {"id": 7002, "name": "Slides 2", "releaseDate": "2026-10-20T10:00:00+02:00", "type": "attachment",
+       "slides": [{"id": 1, "slideNumber": 1}],
+       "attachment": {"id": 8002, "name": "Slides 2",
+                      "link": "attachments/attachment-video-units/7002/AttachmentUnit_2026-10-20T10-00-00-000_lec02.pdf",
+                      "releaseDate": "2026-10-20T10:00:00+02:00"}},
+      {"id": 7003, "name": "Recording only", "type": "attachment", "videoSource": "https://video.example/1"}
+    ]
+  },
+  {
+    "id": 5001, "title": "Lecture 1: Introduction",
+    "startDate": "2026-10-14T10:00:00+02:00", "isTutorialLecture": false,
+    "lectureUnits": [
+      {"id": 7001, "name": "Slides 1", "type": "attachment",
+       "attachment": {"id": 8001, "name": "Slides 1",
+                      "link": "attachments/attachment-video-units/7001/AttachmentUnit_2026-10-13T10-00-00-000_lec01.pdf"}},
+      {"id": 7004, "name": "Exercise sheet", "type": "attachment",
+       "attachment": {"id": 8004, "name": "Exercise sheet 1.zip", "link": "attachments/lecture/5001/Exercise_sheet_1.zip"}},
+      {"id": 7005, "name": "External notes", "type": "attachment",
+       "attachment": {"id": 8005, "name": "External notes", "link": "https://notes.example/intro"}}
+    ]
+  },
+  {"id": 5003, "title": "Tutorial without date", "isTutorialLecture": true, "lectureUnits": []}
+]

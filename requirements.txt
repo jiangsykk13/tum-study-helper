@@ -1,0 +1,10 @@
+# Python 3.12+ on Windows 10/11. Install into the project's own .venv:
+#   uv venv --python 3.12
+#   uv pip install -r requirements.txt
+pymoodlekit[mcp]==0.1.1
+mcp>=2.3,<3
+requests>=2.32
+beautifulsoup4>=4.12
+keyring>=25
+pyotp>=2.9
+pywin32>=306; sys_platform == "win32"

@@ -1,0 +1,9 @@
+[
+  {"id": 302, "type": "channel", "name": "exercise-questions", "isMember": true,
+   "isPublic": true, "subType": "exercise", "subTypeReferenceId": 99},
+  {"id": 301, "type": "channel", "name": "announcements", "description": "Imaginary course news",
+   "isAnnouncementChannel": true, "isCourseWide": true, "isPublic": true,
+   "unreadMessagesCount": 3, "lastReadDate": "2026-10-20T08:00:00Z",
+   "lastMessageDate": "2026-11-08T09:00:00Z", "creator": {"login": "not-exported"}},
+  {"id": 303, "type": "channel", "name": "optional-study-group", "isPublic": true, "isMember": false}
+]

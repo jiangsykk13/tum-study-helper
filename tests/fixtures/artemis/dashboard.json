@@ -1,0 +1,15 @@
+{
+  "courses": [
+    {
+      "course": {"id": 901, "title": "Imaginary Algorithms", "shortName": "IMALG", "semester": "WS26/27",
+                 "startDate": "2026-10-12T08:00:00+02:00", "endDate": "2027-02-12T18:00:00+01:00",
+                 "testCourse": false, "maxComplaints": 3},
+      "totalScores": {"maxPoints": 0.0, "reachablePoints": 0.0}
+    },
+    {
+      "course": {"id": 902, "title": "Fictional Databases", "shortName": "FICDB", "semester": "WS26/27"},
+      "totalScores": {"maxPoints": 10.0, "reachablePoints": 5.0}
+    },
+    {"course": {"title": "Broken entry without id"}}
+  ]
+}

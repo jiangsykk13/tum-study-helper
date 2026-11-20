@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.part
+downloads/
+*.db
+.venv/
+ui.log
+
+# Per-machine configuration: absolute paths of your own Python and project folder.
+.mcp.json
+.claude/settings.local.json
+.claude/launch.json
+
+# Your own notes for AI agents (personal schedule, paths, accounts); see AGENTS.md.
+AGENTS.local.md
+CLAUDE.local.md
