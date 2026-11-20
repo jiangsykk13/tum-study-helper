@@ -423,9 +423,6 @@ python -I tum_moodle_auto.py chatgpt        # 前台运行 tunnel-client（chatg
 
 ## 已知问题
 
-- **离线测试里目前有 5 个已知失败**（2026-11-20）：`tests/test_sync.py` 的 4 个 `ActivityNameTests`——`moodle_sync.display_filename()`
-  里还是 `TODO(human)`（Analysis 课按活动名命名的规则，作者自己来写），实现前它原样返回服务器文件名；`tests/test_client_sync.py`
-  的 1 个 `parse_lectures([{'id': 1}], 1)` 异常结构检查（旧问题）。其余全部通过。
 - `TumSso` 只看第一个 `<form>`；TUM 登录页改版或多出表单时可能走错。
 - 两步验证只支持 TOTP，并且需要原始的 base32 种子。
 - `download` 的 `dest_dir` 没有限制。
@@ -597,7 +594,7 @@ python -I tum_moodle_auto.py chatgpt        # 前台运行 tunnel-client（chatg
 - 新结果类别：`trashed`、`kept_local`、`renamed`（"旧路径 → 新路径"）；网页同步中心有对应标签。
 - **Analysis（121121）按活动名命名**：`ACTIVITY_NAMED_COURSES` 里的课，单文件 resource 用 `display_filename()`（活动名 + 原扩展名）；
   folder 里的文件仍用原名。身份仍是服务器原文件名。已跟踪且未改动的文件在下次真实同步时按新规则改名（`relayout`，记 `renamed`），
-  移动后、写状态前中断，下次按内容认回。`bonus test` 归 Exams（`(?:short|bonus)[ _-]?tests?`）。
+  移动后、写状态前中断，下次按内容认回。活动名为空或只有标点时仍用原名；活动名已带同样扩展名（不分大小写）时不重复加；多余空白合并成一个空格，非法字符由 `safe_name()` 处理。`bonus test` 归 Exams（`(?:short|bonus)[ _-]?tests?`）。
 - 学习计划引用材料：`planner.py` 校验和 `planner_presentation.py` 显示都按材料编号到索引里找当前路径（以前只对 Entrepreneurship），
   所以课件改名后旧计划仍能找到；索引路径在下次 `materials ingest` 时更新。被移到回收站的旧版本，旧计划里的链接会失效（用户接受）。
 - **Artemis 频道附件**：`file_url()` 另外放行 `/api/core/files/courses/<课程>/conversations/<频道>/<文件>`（2026-11-15 实测

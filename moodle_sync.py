@@ -382,10 +382,13 @@ def display_filename(activity, filename):
     if (_field(activity, "course_id") not in ACTIVITY_NAMED_COURSES
             or _field(activity, "type") != "resource"):
         return filename
-    name = str(_field(activity, "name", "") or "")
+    name = " ".join(str(_field(activity, "name", "") or "").split())
     suffix = PurePosixPath(filename).suffix
-    # TODO(human): return the activity-based name, or filename when it is not usable.
-    return filename  # Until then: the server's name, so nothing gets renamed.
+    if not re.search(r"\w", name):  # Empty or only punctuation: the upload's name says more.
+        return filename
+    if suffix and name.casefold().endswith(suffix.casefold()):  # "Sheet 2.pdf" stays "Sheet 2.pdf".
+        return name
+    return name + suffix  # safe_name() in _layout makes it a Windows-safe component.
 
 
 def _layout(root, activity, folder_parts, filename, by_kind=False):

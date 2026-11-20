@@ -1019,6 +1019,9 @@ class ActivityNameTests(unittest.TestCase):
         self.assertEqual(sync.display_filename(activity(20, "Sheet 2.pdf", course_id=self.COURSE), "x.pdf"),
                          "Sheet 2.pdf")
         self.assertEqual(sync.display_filename(activity(20, "  ", course_id=self.COURSE), "x.pdf"), "x.pdf")
+        self.assertEqual(sync.display_filename(activity(20, " - ", course_id=self.COURSE), "x.pdf"), "x.pdf")
+        self.assertEqual(sync.display_filename(activity(20, "Sheet  3.PDF", course_id=self.COURSE), "x.pdf"),
+                         "Sheet 3.PDF")
         self.assertEqual(sync.display_filename(activity(20, "Sheet 2", course_id=7), "x.pdf"), "x.pdf")
         self.assertEqual(sync.display_filename(activity(22, "Material", kind="folder", course_id=self.COURSE),
                                                "chapter 1.pdf"), "chapter 1.pdf")

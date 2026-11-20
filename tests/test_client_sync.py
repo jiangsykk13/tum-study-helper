@@ -212,11 +212,13 @@ class ArtemisContractTests(unittest.TestCase):
             with self.subTest(payload=payload), self.assertRaises(app.MoodleError):
                 artemis.parse_courses(payload)
         self.assertEqual(artemis.parse_courses({"courses": []}), [])
-        for payload in ({}, ["invalid"], [{"id": 1}], [{"id": 1, "lectureUnits": {}}],
+        for payload in ({}, ["invalid"], [{"id": "1"}], [{"title": "no id"}], [{"id": 1, "lectureUnits": {}}],
                         [{"id": 1, "lectureUnits": [{"id": 2, "attachment": "changed"}]}]):
             with self.subTest(payload=payload), self.assertRaises(app.MoodleError):
                 artemis.parse_lectures(payload, 1)
         self.assertEqual(artemis.parse_lectures([], 1), [])
+        # Real Artemis omits lectureUnits for a lecture without content yet (2026-10-25): legal, no files.
+        self.assertEqual([lecture["attachments"] for lecture in artemis.parse_lectures([{"id": 1}], 1)], [[]])
 
     def test_exercise_absence_remains_legal_but_wrong_types_fail(self):
         self.assertEqual(artemis.parse_exercises({"totalScores": {}}, 1), [])
